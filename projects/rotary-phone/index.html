@@ -1,0 +1,188 @@
+<html>
+
+<head>
+    <title>Tait Berlette - Rotary Dial Cell Phone</title>
+    <link rel="stylesheet" type="text/css" href="/project.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div id="title">
+        <h1>tait berlette - <a href="/">home</a></h1>
+    </div>
+    <div id="header">
+        <h1>Rotary Dial Cell Phone!</h1>
+    </div>
+    <div id="content">
+        <div class="section">
+            <div class="text">
+                <p>I adore retro technology so much, I love all the old mechanical sounds and buzzing and how simple
+                    everything is! A project I've been working on for a while is a cell phone with a rotary dial! I've
+                    been working on this project since early 2022 when I first bought a old rotary phone, but back then
+                    I didn't do a very good job of documenting my work... I've made many iterations of this project, and
+                    I think I am finally at a point where I am happy with it! The first four versions all used
+                    Adafruit's SIMCOM 5320 module as a modem, using 3G technology. As carriers are phasing out older
+                    cell tower technology, for my fifth and current version I had to upgrade to Makerfab's Maduino Zero
+                    LTE which supports VoLTE and 4G data connection!</p>
+            </div>
+
+            <img src="/assets/images/projects/rotary_phone/front_hallway.jpg" alt="Latest version of the rotary phone">
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>My first version was very simple, just a proof of concept. It had a 16x2 character LCD display, the
+                    SIMCOM 5320 modem, and the rotary dial, with an Arduino Mega powering the project. It wasn't a cell
+                    phone, as it had to be plugged in, but it did work! The only thing it could do was phone the number
+                    input from the dial, and accept calls by dialing the number 1 on the incoming call screen. </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>The next version was fancier. I 3D printed a case and it had a battery, so it was truly a cell phone!
+                    This version was powered by an ESP32 dev board and had an e-ink screen, with the same modem. I also
+                    used the ESP32's touch capacitive support to add a few buttons to help navigating the device. This
+                    version could call the same as the previous version, but it also had a contacts list support! With
+                    the ESP32's wifi, I also had a web dashboard that could be used to edit contacts from another
+                    device! The case for this phone was a disaster, just a big void to hold all the components loosely.
+                    It was my first time designing a 3D printed enclosure, and it broke not long after.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="/assets/images/projects/rotary_phone/version_3.png" alt="Version 3 of the rotary phone">
+            <div class="text">
+                <p>The third version was where I started making progress. This version had a colour LCD screen, and I
+                    laid out everything nicely on a perf board to hold all the components! I also had a fun colourful
+                    LED light ring to show notifications, progress, or other things going on! In this version, I also
+                    figured out how to receive text messages, and reply with some pre-determined responses. I also had a
+                    simple web server running, which let my get the weather or read snippets of my emails! A major
+                    downside was the lack of any other buttons, so everything had to be done with the dial. This was
+                    okay in most cases, except when I was dialing a number I couldn't backspace or accept when I was
+                    done, I had a timer to submit the input after a certain period of inactivity. It also didn't help
+                    that due to the timeout, if someone was reading my number or I was taking time to enter it, it was
+                    possible for the number to be submitted too early, leading me to have to retype the entire thing
+                    again. The phone was very massive, and hard to move around, and the limitations on the input
+                    compelled me to try a new version.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>The fourth version of my rotary cell phone was a beast, and I went all out on the features. It had a
+                    massive touch screen display, a finger print reader, a set of four full size keyboard keys with RGB
+                    lights, a camera powered by an ESP32 Camera, and a solar panel (although the solar panel was more
+                    just for funzies). The touch screen interface was powered by LVGL, and made using the phone so much
+                    easier! Because of all the extra features I added to this version of the rotary cell phone, this
+                    version was even more bulky than the last one, so it wasn't practical at all.
+                </p>
+            </div>
+            <img src="/assets/images/projects/rotary_phone/version_4_front.png"
+                alt="The front of the fourth version of the rotary cell phone">
+        </div>
+
+        <div class="gallery">
+            <img src="/assets/images/projects/rotary_phone/version_4_caseless.png">
+            <img src="/assets/images/projects/rotary_phone/version_4_camera.png">
+            <img src="/assets/images/projects/rotary_phone/version_4_breadboard.png">
+        </div>
+
+        <div class="section">
+
+            <img src="/assets/images/projects/rotary_phone/version_5_caseless.png" alt="The rotary phone with no case">
+            <div class="text">
+                <p>I took a few years break after the last version, as the modem I used in the phones (operating on a 3G
+                    network), was about to expire. Late in the summer of 2025, I found a new modem by Makerfabs, which
+                    had an Arduino and SIMCOM 7600 (a 4G modem!) on the same board, so I had a longing to build the next
+                    iteration, trying to focus on making it as small as possible, so it would be more practical in the
+                    real world! Having the arduino and modem on the same circuit board helped a lot, it meant I didn't
+                    need a huge perf board to hold everything today, I just had a little one for some button inputs.
+                    Other than the dial and OLED screen, the only other hardware is three buttons, and a rotary encoder
+                    (which also has a button of its own), to get a full 16 inputs like an Nokia phone. The interface of
+                    this phone is greatly inspired by the Nokia 3310, and borrows some pictures, fonts, and animations!
+                </p>
+            </div>
+        </div>
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>I took a lot of care to measure everything (using actual calipers this time!!) to ensure the case was
+                    as compact as possible, while still being sturdy. Once I got everything together, and after some
+                    trial and error, I got everything put together beautifully!
+
+                </p>
+
+                <br>
+                <p>A 3D model of the case I made in Blender (this version happened JUST before I learned Solidworks) is
+                    shown below!</p>
+            </div>
+            <img src="/assets/images/projects/rotary_phone/version_5_crosssection.png"
+                alt="A cross section of the rotary phone, with one of the side panels removed">
+
+
+        </div>
+
+        <div class="section">
+            <model-viewer alt="Pipe organ keyboard 3D model" src="/assets/models/rotary_cell_phone_v5.glb"
+                shadow-intensity="1" camera-controls touch-action="pan-y" environment-image="/assets/models/lighting.hdr">
+            </model-viewer>
+        </div>
+
+        <div class="section">
+
+            <img src="/assets/images/projects/rotary_phone/typing.png"
+                alt="A screen of the rotary cell phone showing typed text">
+            <div class="text">
+                <p>Features of this version include the regular calling, but I could also reply to text messages, using
+                    predictive T9 typing inspired by the work by <a href="https://github.com/dupontgu">Guy Dupont</a>
+                    and his <a href="https://github.com/dupontgu/t9-macropad-circuitpython">Standalone T9 Predictive
+                        Keyboard</a>, which I translated from Python into C++, but using the same library files. There
+                    is also a pretty robust web server for adding social media messaging support (right now only
+                    Instagram & Whatsapp), by running a puppeteer browser instance and listening for messages, before
+                    sending them to the cell phone. In addition, also via the web server, there is support for accepting
+                    Duo Push authorizations, and unlocking the front door of my apartment building! I am still working
+                    on this project, so there is more to come!</p>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <video controls>
+                <source src="/assets/images/projects/rotary_phone/call.mp4" type="video/mp4">
+            </video>
+            <video controls>
+                <source src="/assets/images/projects/rotary_phone/text.mp4" type="video/mp4">
+            </video>
+            <img src="/assets/images/projects/rotary_phone/top_headphones.png">
+            <img src="/assets/images/projects/rotary_phone/prototyping.png">
+        </div>
+
+
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>Through my many revisions, I have gotten the rotary dial cell phone down to a size I am much happier
+                    with compared to the previous versions! Here is a comparison of the cases, with the latest on the
+                    left, and the oldest (version 2) on the right!</p>
+            </div>
+
+
+            <img src="/assets/images/projects/rotary_phone/comparison.png"
+                alt="A photo showing the four latest versions side by side, showing the iteration and size reduction ">
+        </div>
+
+         <div class="section">
+
+            <div class="text">
+                <p>This project took a lot of research, and a lot of iteration to get to a point where I was happy with the design! It shows I have the dedication to stick with a project and the motivation to learn new things!</p>
+            </div>
+</div>
+
+    </div>
+</body>
+
+</html>

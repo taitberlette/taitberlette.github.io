@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <title>Tait Berlette - Sand Tricycle</title>
+    <link rel="stylesheet" type="text/css" href="/project.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div id="title">
+        <h1>tait berlette - <a href="/">home</a></h1>
+    </div>
+    <div id="header">
+        <h1>Sand Tricycle! (IN PROGRESS)</h1>
+    </div>
+    <div id="content">
+        <div class="section">
+            <div class="text">
+                <p>Something that I've always been thinking about is creating a vehicle powered by a greener energy
+                    source, rather than what we currently have. So many people drive vehicles that either create
+                    emissions as they drive, or require a great deal of effort into manufacturing their batteries. Back
+                    at the end of 2023, I read an article about sand batteries, which is basically a huge mass of sand
+                    that stores energy as heat, and I thought I want to try to apply that to a vehicle, so I started
+                    working on this project!</p>
+            </div>
+
+            <img src="/assets/images/projects/sand_tricycle/sand_tricycle.png" alt="A side view of the sand tricycle">
+        </div>
+
+        <div class="section">
+            <img src="/assets/images/projects/sand_tricycle/bucket.png"
+                alt="An aluminium pot half full with sand, with three kettle heating elements stuck inside">
+
+            <div class="text">
+                <p>The first step to this project was to create the sand battery that I would use in my design. I went
+                    to Value Village, and got a nice big aluminium pot and some old kettles to use as heating elements,
+                    and mixed it in with some sand we had in our garage!
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>With the kettle heating elements, I was able to get the temperature up to about 260 degrees Celsius,
+                    when powered by a 120 volt outlet with the kettles in series (as heating elements are basically just
+                    big resistors designed to emit heat).</p>
+            </div>
+
+            <img src="/assets/images/projects/sand_tricycle/hot.jpg"
+                alt="The themometer in the bucket showing 260 degrees Celsius">
+        </div>
+
+
+        <div class="section">
+            <img src="/assets/images/projects/sand_tricycle/insulated.png"
+                alt="The same aluminum pot, now topped off with sand of the kettle heaters are not visible, and with an insulation layer on the outside.">
+
+            <div class="text">
+                <p>With the proof of concept working, I wanted to try and retain more energy, so I added some insulation
+                    to the aluminum pot and added a bunch more sand to top it off. I had a lot of trouble with the
+                    wiring, all the insulation from the wires would always melt off or start burning, I got it sorta
+                    working with electrical tape, but it could only go so far towards the sand before it started
+                    melting. I also didn't have a way to insulate the top, so that would definitely be a point for
+                    improvement, but so far I had not made it far enough into the project for that to matter. Also, the
+                    insulation I had was only good for up to about 220 degrees I think, and the inside layers were
+                    burning, so this layout wasn't going to work.</p>
+            </div>
+        </div>
+
+
+
+        <div class="section">
+            <div class="text">
+                <p>The next thing I tried was to use a cast iron pot, as it should be better at retaining heat compared
+                    to aluminium. In addition, apparently (who could have guessed), kettle heating elements only
+                    designed to heat water up to 100 degrees Celsius for a short period, are not great at withstanding
+                    over 250 degrees Celsius for long periods of time, and all three eventually started crumbling and
+                    breaking, so I made the switch to an electric stove top heating element from Home Depot! </p>
+            </div>
+
+            <img src="/assets/images/projects/sand_tricycle/stove_element.png"
+                alt="A cast iron pot filled with sand, and a heating element inside.">
+
+        </div>
+
+
+
+        <div class="section">
+            <img src="/assets/images/projects/sand_tricycle/peltier.png"
+                alt="Four peltier elements arranged in series, they look like four flat white squares">
+
+            <div class="text">
+                <p>Now that I had a decent source of heat, or at least one that could get me by, I started looking at
+                    ways to extract this energy. The original way I was thinking about getting this energy was with
+                    Peltier modules, which contain an alternating lattice of metals, where when a temperature difference
+                    is applied, electricity flows through the circuit. </p>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <div class="text">
+                <p>I originally just started with four Peltier modules, but that was not nearly enough power I need to
+                    power a motor, or even an LED light, so I got some more. There was still nowhere near enough power
+                    to get a motor going, but at least I got an LED powered only off of thermal energy!</p>
+            </div>
+            <video controls>
+                <source src="/assets/images/projects/sand_tricycle/led.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>The problem with Peltier modules, that I didn't realize when I started working on this project, is
+                    that they are SO inefficient, below 10%, so a large portion of the heat I had was wasted, so I don't
+                    think I'll be using them again. The next thing I want to try is using a stirling engine, which is a
+                    heat powered engine that directly converts thermal energy into mechanical motion, without first
+                    converting to electricity! I thought that using a stirling engine would work much better, but back
+                    in Grade 12 I did not have the skills or the knowledge to build and manufacture one myself, so I
+                    took a pause from that project. Two years later, now at the end of 2025, I have much more knowledge
+                    about design and manufacturing from my first year and a half at UofT, and I am feeling ever more
+                    confident in my ability to work on this project again soon!</p><br>
+                <p>I don't know if anything will ever come from this project, I know a lot of people have researched
+                    stirling engines in the past (including NASA!) and not much has been done with them in the real
+                    world, but who knows, maybe I'll get somewhere! Even if this project is a failure in the future, I
+                    am still learning lots of valuable skills and making an attempt.
+                </p><br>
+                <p>I am hoping to work on this project again in the summer of 2026, after I have learned about
+                    thermodynamics after my winter semester in second year!</p>
+                <br><br>
+                <p>Even though I didn't get the energy output I wanted, I still mounted it to the tricycle to see if
+                    anything would happen, and it did! It was just so weak 💔 But better than nothing!!</p>
+            </div>
+        </div>
+
+
+        <div class="gallery">
+            <video controls>
+                <source src="/assets/images/projects/sand_tricycle/yay.mp4" type="video/mp4">
+            </video>
+            <img src="/assets/images/projects/sand_tricycle/battery_mounted.png"
+                alt="Four peltier elements arranged in series, they look like four flat white squares">
+
+        </div>
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>This project shows my research into my future area of interest, looking towards a more sustainable
+                    energy source for vehicles! It also highlights my passion for learning and trying new things, and
+                    not giving up when things are hard.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+</body>
+
+</html>

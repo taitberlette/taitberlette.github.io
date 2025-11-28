@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Tait Berlette - Cinematography Robot</title>
+    <link rel="stylesheet" type="text/css" href="/project.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div id="title">
+        <h1>tait berlette - <a href="/">home</a></h1>
+    </div>
+    <div id="header">
+        <h1>Cinematography Robot!</h1>
+    </div>
+    <div id="content">
+        <div class="section">
+            <div class="text">
+                <p>In MIE243, a second year mechanical engineering course at UofT focused on learning about mechanisms,
+                    we were tasked with designing a cinematography robot! With my past knowledge of designing, my role
+                    was to check the feasibility of the proposed designs and ensure that they would work outside the
+                    ideal world of Solidworks.
+                </p>
+            </div>
+            <img src="/assets/images/projects/robot_mie243/geoff.png" alt="A picture of our final robot">
+        </div>
+
+        <div class="section"><img src="/assets/images/projects/robot_mie243/idea.jpg"
+                alt="A picture of my candidate design">
+
+            <div class="text">
+                <p>In our team, we each came up with a candidate design. My design had a lot of different parts, trying
+                    to expand the design space and give us as much as we could work with. My design included a rack and
+                    pinion to allow one of the arms to extend, with the idea that it would never extend more than
+                    halfway to ensure the arm didn't become unbalanced, but it ended up being rejected to ensure there
+                    were no rigidity concerns. I was also playing around with the idea of having multiple kinds of base
+                    plates for different environments, but that was deemed too expensive. </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>I had previously watched a video by <a href="https://www.aaedmusa.com/">Aaed Musa</a> and his
+                    research on Capstan drives, and I was very interested and wanted to try to implement something
+                    similar in our design. The benefits of a Capstan drive is that instead of using gears between two
+                    components, it uses rope, so there is very little noise and essentially zero backlash, assuming the
+                    rope is pulled in tension. A smaller drum connected to a larger drum</p>
+            </div>
+            <img src="/assets/images/projects/robot_mie243/capstan.png" alt="A picture of the capstan drive">
+
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>In the end, our final design we combined all the best parts from our candidate designs to create
+                    GEOFF, the Guided Electronic Optical Filography Footage (totally didn't pick the name first),
+                    consisting of a sliding base powered by a pulley system for lateral movement, a bevel gear for yaw
+                    rotations, a Capstan drive & gearbox powered by a BLDC servo motor for the first arm, a gearbox &
+                    BLDC server motor for the second arm, and some small but powerful gimbal motors to orient the camera
+                    at the end of the arm.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <model-viewer alt="A 3D model of our robot" src="/assets/models/geoff.glb" shadow-intensity="1"
+                camera-controls touch-action="pan-y" environment-image="/assets/models/lighting.hdr">
+            </model-viewer>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>By completing this project, I learned a lot about creating true CAD models and designs, as opposed to
+                    Blender which I had been using in the past for manufacturing. I also learned a lot about working
+                    together with a team of people, how to manage the workload and work on a big CAD project together,
+                    where communication and documentation was critical to ensure everyone's work fit together.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <img src="/assets/images/projects/robot_mie243/itp.png" alt="My ITP metrics chart">
+            <div class="text">
+                <p>From my team, I received very positive feedback about my work! They collectively gave me a higher
+                    rating than what I thought I deserved, but I am very grateful for it! My weakest point was
+                    "Expression", which by ITP metrics is defined as being able to "Communicate effectively and share
+                    ideas and information", which I can agree with. I need to do a better job of getting my ideas down
+                    on paper and ensuring everyone is on the same page.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

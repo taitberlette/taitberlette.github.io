@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    font-family: "Space Grotesk";
+    margin: 0;
+}
+
+body {
+    background-color: #d4c7de;
+    overflow-x: hidden;
+}
+
+#header {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    /* horizontal */
+    align-items: center;
+    /* vertical */
+    flex-direction: column;
+    /* stack vertically */
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 20px;          /* space between image and text */
+  margin: 40px 0;
+}
+
+.section img, .section video {
+  width: 40%;         /* adjust as needed */
+}
+
+.section model-viewer  {
+  height: 50vh;
+  width: 100%;
+}
+
+.section .text {
+  flex: 1;            /* text takes remaining space */
+}
+
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    /* spacing between images */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+    /* optional */
+    white-space: nowrap;
+    /* prevents wrapping */
+}
+
+.gallery img, .gallery video {
+    height: 50vh;
+    /* the unified height */
+    object-fit: cover;
+    /* crops nicely while preserving aspect */
+    flex-shrink: 0;
+    /* prevents images from shrinking */
+}
+
+@media (max-width: 700px) {
+  .section, .section.reverse {
+    flex-direction: column;      /* stack for narrow screens */
+    text-align: center;
+  }
+
+  .section img, .section video {
+    width: 100%;
+  }
+}
+
+
+#title {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    /* horizontal */
+    align-items: center;
+    /* vertical */
+    flex-direction: column;
+    /* stack vertically */
+    background-color: #914bd3;
+    color: white;
+}
+
+#title a {
+    color: white;
+    font-size: 4vh;
+}
+
+#content {
+    padding: 5vw;
+    background-color: white;
+}
+
+#content p {
+    font-size: larger;
+}

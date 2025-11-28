@@ -1,0 +1,212 @@
+<html>
+
+<head>
+    <title>Tait Berlette - Pipe Organ</title>
+    <link rel="stylesheet" type="text/css" href="/project.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div id="title">
+        <h1>tait berlette - <a href="/">home</a></h1>
+    </div>
+    <div id="header">
+        <h1>3D Printed Pipe Organ!</h1>
+    </div>
+    <div id="content">
+        <div class="section">
+            <img src="/assets/images/projects/pipe_organ/top_down.jpg" alt="Pipe organ front view">
+            <div class="text">
+                <p>This is a pipe organ I built in the summer of 2023, which is made up of a 3D printed keyboard, PVC
+                    pipes with a 3D printed flue to create the vibrations (sound), and two foot pumps to generate the
+                    airflow! I wanted to make a pipe organ partly because I absolutely love the movie Interstellar, and
+                    a majority of the music from it heavily uses the pipe organ! This project took a lot of work to get
+                    right, there was a lot of trial and error and iteration. This was my first purely
+                    mechanical/physical project, everything before had some sort of electronics or software. I made a
+                    lot of silly mistakes, but that c was all part of the learning process!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>The first thing I started with was the pipes. I figured that if I couldn't get this part working
+                    there would be no point in worrying about the rest of the mechanisms including the keyboard and air
+                    generation. I originally started trying to make paper tubes, just by rolling up a sheet of paper,
+                    but I couldn't get any nice sounds (I think because I had the radius of the tube too small?), so I
+                    decided I would give a PVC pipe a try which worked much better, and once I got it working with that,
+                    I made an entire octave! </p>
+            </div>
+            <img src="/assets/images/projects/pipe_organ/first_pipes.png" alt="First pipe organ pipes">
+        </div>
+
+        <div class="section">
+            <img src="/assets/images/projects/pipe_organ/pipe_length_problem.png"
+                alt="Picture explaning pipe length problem">
+            <div class="text">
+                <p>To get the length of pipes right, I used the equations I learned in my Grade 11 physics class, about
+                    the vibration in open and closed pipes, however when I put that to the test it didn't sound right.
+                    The note I was expecting did not match what I heard (and my tuner verified!). I had to do some
+                    research, and I later learned that a little section past the end of the pipe behaves as if it is
+                    inside, so the length I calculated included both the pipe and the bit outside. I just had to cut
+                    down the pipe a little so the bit outside was included in my calculation, but I did that just by
+                    trial and error. </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>To create the adapter for the PVC with the "mouth" to alter the air current to generate the sound, I
+                    based my design off work by <a href="https://github.com/benjaminwand">Benjamin Wand</a>, who created
+                    <a href="https://github.com/benjaminwand/3d-printed-labial-pipe">CAD files</a> with variables I
+                    could tweak and customize to fit my needs, so a huge thanks to him and his efforts! At the time, I
+                    didn't know any CAD myself, I only knew how to work in Blender, so I exported the designs from
+                    FreeCAD and opened them there to edit. The photo on the left shows the design I modified from Wand's
+                    work, the photo is from his GitHub repository.
+                </p>
+            </div>
+            <img src="/assets/images/projects/pipe_organ/pipe_13_1.png"
+                alt="A photo of the design I modified from Benjamin Wand's original work">
+        </div>
+
+        <div class="section">
+
+            <img src="/assets/images/projects/pipe_organ/first_keyboard.png"
+                alt="The first keyboard, which did not work">
+            <div class="text">
+                <p>The keyboard was the first time I was creating a moving 3D print, but I had an overcomplicated design
+                    and it did not end up working. I was trying to have valves held down by springs, and a string was
+                    attached from the key to the valve, passing through the case? But it did not work, for obvious
+                    reasons, it was too finicky and had way too many spots for leaks.</p>
+            </div>
+        </div>
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>My second design for the keyboard was much better! It consists of multiple modular parts, so I could
+                    test various designs and modifications without reprinting the entire keyboard. The large black piece
+                    at the front holds the keys and has slots for elastic bands to return the keys to a flat position
+                    once released. The middle white piece is the airflow channel, with an input and output at either
+                    ends, and slots for the keys to act as valves. The final black piece at the back is an adapter to
+                    convert the airflow channels into the larger plastic tubing to connect the pipes. It still needed a
+                    new revision to get optimal air sealing, and it still isn't perfect, but it's much better than
+                    before!
+                </p>
+
+                <br>
+                <p>A 3D model of an early revision of the second keyboard design is shown below! At this point I still
+                    only knew Blender, it wouldn't be until fall 2025 that I would learn CAD in my second year of
+                    mechanical engineering, but it did its job!</p>
+            </div>
+            <img src="/assets/images/projects/pipe_organ/keyboard_model_separated.png"
+                alt="A screenshot of a 3D model showing the various parts of the pipe organ keyboard">
+
+
+        </div>
+
+        <div class="section">
+            <model-viewer alt="Pipe organ keyboard 3D model" src="/assets/models/pipe_organ_keyboard.glb"
+                shadow-intensity="1" camera-controls touch-action="pan-y" camera-orbit="-77.21deg 0.0000573deg 1502m"
+                environment-image="/assets/models/lighting.hdr">
+                <button class="Hotspot" slot="hotspot-5"
+                    data-position="179.58393275738172m -5.528504493768784m 372.2149200439453m" data-normal="0m 0m 1m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Air Intake</div>
+                </button><button class="Hotspot" slot="hotspot-12"
+                    data-position="237.20251149868426m 1.6423997879028285m -1.5618473864331008m" data-normal="0m 1m 0m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Pipe Adapters</div>
+                </button><button class="Hotspot" slot="hotspot-13"
+                    data-position="179.40432112096073m 1.642399993581421m -1.6940583674131418m"
+                    data-normal="4.467410325209029e-8m 0.9999999999999667m 2.543134125829424e-7m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Valves</div>
+                </button><button class="Hotspot" slot="hotspot-14"
+                    data-position="32.67680977371663m 13.642399787902832m -3.183551466980646m" data-normal="0m 1m 0m"
+                    data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Keyboard</div>
+                </button>
+
+            </model-viewer>
+        </div>
+
+        <div class="section">
+
+            <img src="/assets/images/projects/pipe_organ/pumps.png"
+                alt="A screenshot of a 3D model showing the various parts of the pipe organ keyboard">
+            <div class="text">
+                <p>Now that the pipes and keyboard were underway, the last step was how to generate airflow. This part
+                    took me a long time to figure out. I tried using motors with various kinds of fans, I had balloons,
+                    and fireplace bellows, but nothing I tried was either quiet enough or didn't generate enough
+                    airflow. I think part of the problem was my keyboard, there were leaks between seams which allowed
+                    the air to leave even when no keys were pressed, so I couldn't just store air, I needed to
+                    constantly generate it. In the end, I found these foot powered pumps designed to blow up tents or
+                    other inflatables, and 3D printed an adapter to connect to my keyboard! </p>
+            </div>
+        </div>
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>The frame for the pipe organ was mainly built out of two old IKEA shelves we had in our garage, with
+                    some supports made out of 1 by 6 inch boards. The stand for the pipes was made up of some long thin
+                    slats spanning across the length of the organ.</p>
+            </div>
+
+
+            <img src="/assets/images/projects/pipe_organ/front.jpg"
+                alt="The pipe organ from the front, showing the pipes, keyboard, bellows, and frame">
+        </div>
+
+
+        <div class="section">
+            <img src="/assets/images/projects/pipe_organ/trials.png" alt="A big box of failed 3d prints">
+
+            <div class="text">
+                <p>Overall, the project had a lot more trial and error than what I've talked about here. By the end I
+                    had a box full of failed experiments, but every time I failed it just brought me closer to achieving
+                    my goal!! I'm really happy that I was able to stick with the project for so long, with so many
+                    setbacks and obstacles.</p>
+            </div>
+
+
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>Below are a bunch of other photos, including a short video of me playing a song from Interstellar on
+                    an early version with only two octaves. The final design consisted of 4 octaves (from C3 to C7). I
+                    also added sliders at the top to tune the pipes, as in different air temperatures the frequency
+                    generated by a tube of the same length changes.</p>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <video controls>
+                <source src="/assets/images/projects/pipe_organ/interstellar_video.mp4" type="video/mp4">
+            </video>
+            <img src="/assets/images/projects/pipe_organ/bellows_animation.gif">
+            <img src="/assets/images/projects/pipe_organ/keyboard_animation.gif">
+            <img src="/assets/images/projects/pipe_organ/pipe_animation.gif">
+            <img src="/assets/images/projects/pipe_organ/tall.png">
+            <img src="/assets/images/projects/pipe_organ/behind.jpg">
+            <img src="/assets/images/projects/pipe_organ/keypress.png">
+            <img src="/assets/images/projects/pipe_organ/frame_start.png">
+        </div>
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>This project took a lot of research, and a lot of iteration to get to a point where I was happy with
+                    the design! It shows I have the dedication to stick with a project and the motivation to learn new
+                    things!</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>Tait Berlette - Breadboard Computers</title>
+    <link rel="stylesheet" type="text/css" href="/project.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div id="title">
+        <h1>tait berlette - <a href="/">home</a></h1>
+    </div>
+    <div id="header">
+        <h1>Breadboard Computers!</h1>
+    </div>
+    <div id="content">
+        <div class="section">
+            <video controls>
+                <source src="/assets/images/projects/retro_computers/fibbo.mp4" type="video/mp4">
+            </video>
+            <div class="text">
+                <p>One of my first every hardware projects, after having been programming for a while, was after I saw
+                    <a href="https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU">Ben Eater's 8-bit
+                        computer video series</a>, it was so crazy to me that a little computer could be built on
+                    breadboards, and I wanted to learn more about how computers worked so I thought I would give it a
+                    try! Ben Eater does an incredible job explaining everything going on, and I had some much fun
+                    following along. At the end of his video series, I had a fully working computer, with 16 bytes of
+                    memory. This video is the computer running the fibonacci sequence!
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>After I had finished, I wanted to expand the computer to add more functionality and be able to run
+                    more complex programs. I upgraded the program counter to a full 8 bits, and I upgraded the RAM to be
+                    256 bytes! My next step would have been to add a stack to get support for subroutines. </p>
+            </div>
+            <img src="/assets/images/projects/retro_computers/upgrade.png"
+                alt="Upgraded 8-bit computer with a few visual differences">
+        </div>
+
+        <div class="section">
+            <video controls>
+                <source src="/assets/images/projects/retro_computers/programmer.mp4" type="video/mp4">
+            </video>
+            <div class="text">
+                <p>I also worked on creating a little (very very slow) programmer for the computer using an Arduino,
+                    with no EEPROM or other form of permanent memory, the entire computer's program had to be re-input
+                    using the DIP switches every time. This came with my own little assembler!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>After I finished the 8-bit computer series, I had a much better understanding of how computers work,
+                    and I want to try something a little bit more advanced. I saw Ben Eater's video series about the
+                    6502 microprocessor (same as in the Apple II, Atari 2600, Nintendo Entertainment System, and many
+                    other retro computers), but instead of copying Ben Eater's design 1 for 1, I want to try and give my
+                    own spin to it! I gave my computer 16kb of EEPROM (program storage), to hold system code, I had 32kb
+                    for regular RAM, and 8kb banked RAM (with 64 banks) to hold lots of data for processing or currently
+                    unused programs. I also had two 6522 versatile interface adapters, to talk to all the hardware,
+                    including an LCD display, PS/2 keyboard, SD card slot, and to select a RAM bank. Instead of using a
+                    full logical circuit to select which device is used at any given memory address, I instead used
+                    another EEPROM to take in the top address lines, and set a bit high or low to select a device. This
+                    allowed me to try different combinations of memory arrangement without redoing an entire circuit. As
+                    the EEPROM program memory is so low, there is a kernel which allows programs to be loaded in from
+                    the SD card into RAM. One of the programs I got working was a port of TINY BASIC, a very minimal
+                    BASIC interpreter.
+                </p>
+            </div>
+            <img src="/assets/images/projects/retro_computers/6502.png" alt="A top down picture of my 6502 computer!">
+        </div>
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>My retro computers show I am able to learn from other people, and apply the skills I've learned to
+                    new unique projects, not just copying everything word for word!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

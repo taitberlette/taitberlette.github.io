@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    font-family: "Space Grotesk";
+    margin: 0;
+}
+
+body {
+    background-color: #d4c7de;
+    overflow-x: hidden;
+}
+
+#header {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    /* horizontal */
+    align-items: center;
+    /* vertical */
+    flex-direction: column;
+    /* stack vertically */
+}
+
+#header h1 {
+    font-size: 10vh;
+}
+
+#header h3 {
+    font-size: 5vh;
+}
+
+#name {
+    position: relative;
+}
+
+.hanging-photo {
+    position: absolute;
+    width: 30vw;
+    z-index: -1;
+}
+
+#pipeOrganHanging {
+    top: 0vh;
+    left: 2.5vw;
+    animation-delay: 0s;
+}
+
+#rotaryDialHanging {
+    top: -30vh;
+    right: 2.5vw;
+    animation-delay: -0.5s;
+}
+
+#musicBoxHanging {
+    top: 5vh;
+    right: 0vw;
+    animation-delay: -1s;
+}
+
+#scrollHint {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    /* horizontal */
+    align-items: center;
+    /* vertical */
+    flex-direction: column;
+    /* stack vertically */
+    background-color: #914bd3;
+    color: white;
+}
+
+#scrollHint h4 {
+    font-size: 4vh;
+}
+
+#about {
+    padding: 5vw;
+    background-color: white;
+}
+
+#about p {
+    font-size: larger;
+}
+
+.photo-strip {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    /* spacing between images */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+    /* optional */
+    white-space: nowrap;
+    /* prevents wrapping */
+}
+
+.photo-strip img {
+    height: 30vh;
+    /* the unified height */
+    object-fit: cover;
+    /* crops nicely while preserving aspect */
+    flex-shrink: 0;
+    /* prevents images from shrinking */
+}
+
+#projects {
+    column-count: 4;
+    column-gap: 1rem;
+    padding: 1rem;
+}
+
+.project {
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    break-inside: avoid;
+}
+
+.project img {
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.project .button {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.button {
+    
+    border: none;
+    background-color: #914bd3;
+    padding: 1rem;
+    color: white;
+}
+
+.rock {
+    display: inline-block;
+    transform-origin: center;
+    /* make sure rotation is around the center */
+    animation: rock 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes rock {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+.scale {
+    display: inline-block;
+    animation: scalePulse 1.5s ease-in-out infinite;
+}
+
+@keyframes scalePulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* scale up */
+    }
+
+    100% {
+        transform: scale(1);
+        /* back to normal */
+    }
+}
