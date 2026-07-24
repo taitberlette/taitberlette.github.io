@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <title>Tait Berlette - Blue Sky!</title>
+    <link rel="stylesheet" type="text/css" href="/project.css">
+</head>
+
+<body>
+    <div id="title">
+        <h1>tait berlette - <a href="/">home</a></h1>
+    </div>
+    <div id="header">
+        <h1>Blue Sky Solar Racing (IN PROGRESS)</h1>
+    </div>
+    <div id="content">
+        <div class="section">
+            <div class="text">
+                <p>I joined Blue Sky Solar Racing, the solar racing team at UofT in the winter semester of my first
+                    year!. I joined the electrical subteam as a member, not mechanical, as I thought it would be fun to
+                    maintain some balance between my passion for electronics and mechanical engineering! When I joined I
+                    was tasked with designing part of a new radio system, switching from the Xbee technology to LoRa
+                    technology, to reduce power consumption, increase range, and drastically reduce the price of the
+                    radios! The car's main computer has slots of different modules, and the radio was no exception, so
+                    depending on the event we could switch between XBee and LoRa as necessary! We also used this
+                    approach on the receiving side, as before the team created a new, non-modular device for every radio
+                    technology.</p>
+            </div>
+
+            <img src="/assets/images/projects/bluesky/misc_module.jpg"
+                alt="A top down view of the radio module for the car">
+        </div>
+
+        <div class="section">
+            <img src="/assets/images/projects/bluesky/lora_documentation.png"
+                alt="A screenshot of the start of the documentation page for the LoRa module">
+
+            <div class="text">
+                <p>After designing the board, I spent a lot of time testing it, and wrote up internal documentation
+                    about how the specific board I designed works and how to talk to it! I created custom scripts and
+                    hardware to help me test the range of radio transmissions and data rate of transmission.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>I joined the team late into their current cycle, so after working on the radio my work was mostly
+                    assembling circuit boards, then validating & testing them! One of the main circuit boards that I
+                    helped work on was our Power Hub, which is responsible for connecting and disconnecting the
+                    batteries from the rest of the car, lowering the voltage from the 151 volts of the battery pack to
+                    12 volts for the computer and other low voltage equipment. The Power Hub is responsible for
+                    responding to critical shut down or "safe state" commands, such as battery over
+                    voltage/current/temperature, if the emergency stop switch is pressed either on the inside or outside
+                    of the vehicle.</p>
+                </p>
+            </div>
+            <img src="/assets/images/projects/bluesky/power_hub.jpg"
+                alt="A photo of the power hub circuit board installed in the battery box">
+        </div>
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>I've also helped with other odd jobs, such as assembling the battery packs, working on the wiring
+                    harness, creating power switches for fans and the low voltage battery.</p>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <img src="/assets/images/projects/bluesky/car_testing.jpg"
+                alt="A photo of the car with the solar panels tilted to the side, so you can see in the inside of the vehicle">
+
+            <div class="text">
+                <p>As we got closer to competing in the 2026 Formula Sun Grand Prix, it was time to start doing proper
+                    full system tests of the car! While we had lots of testing sessions scheduled, we were only able to
+                    complete a few, as there were a lot of issues that needed to be fixed that were discovered during
+                    testing. Whenever issues arose, the team worked diligently to fix the problems and get the car back
+                    on the road. I'd like to give a HUGE shoutout to the mechanical team, who worked around the clock
+                    and sacrificed sleep to fix issues with the braking system on the car. My team had a lot of issues
+                    regarding motor power, where while accelerating the screen and driver input would stop responding,
+                    and sometimes the motor would give out entirely and require a reboot of the car to return
+                    functionality. The loss of screen we assume to be due to electromagnetic interference as the motor
+                    draws high currents (as we still faced this issue in some regards through the rest of the car's
+                    life), and for the motor to work more reliably required a lot of tuning and research into the motor
+                    controller to get the acceptable power draw limits configured correctly.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <p>At Formula Sun GP at the Brainerd International Speedway, we passed the electrical & battery
+                    inspection easily (and other subteams too!), however we were still facing reliability issues with
+                    the car while driving. The interference on the screen and driver input persisted, causing the car's
+                    computer to think that buttons were being pressed (even with a cyclic redundancy check), which was
+                    causing the horn to honk at random times, the car to suddenly flip into reverse, and could have
+                    caused the sensitive battery and solar array relays to turn on and off their connection to the high
+                    voltage lines unexpectedly. By improving the shielding of high voltage and low voltage wires we were
+                    able to increase the reliability, however it was still not perfect. In addition, when we charged up
+                    the batteries, the motor cut out issues we faced before returned, as we suspect due to the battery
+                    pack's high voltage, any brief voltage spike would cause the protection system to trip, spikes which
+                    we suspect are related to the car trying to enter reverse gear while at high speeds due to driver
+                    input not functioning correctly. With the driver input in a more reliable state due to increased
+                    shielding, the voltage spike issues also reduced.
+                </p>
+                </p>
+            </div>
+            <video controls loop>
+                <source src="/assets/images/projects/bluesky/car_figure8.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+        <div class="section">
+
+            <img src="/assets/images/projects/bluesky/fracture.png"
+                alt="A photo of the car chassis which a rip by the where suspension mounts">
+
+            <div class="text">
+                <p>Once we had passed all the inspections and the electrical system of the car was more stable, we were
+                    able to enter the track and start racing! We were able to drive at 50 km/h completely energy
+                    neutral, running solely off the power of the solar panels, keeping our batteries fully charged for
+                    when the sun would start to set. Unfortunately, after our 30th lap, our car had a major mechanical
+                    failure that fractured the chassis, so we had to bow out of the race. However, the team was in good
+                    spirits, as we made it a lot farther than the team did last year, leading up to the 2025 Formula Sun
+                    GP, there was basically no time for testing the car and there were major issues with a lot of the
+                    vehicle's system. We are all very proud of how far we made it!</p>
+                </p>
+                <br>
+                <p>On a more personal note, the radio I designed way back at the start of my time at Blue Sky did not
+                    perform very well at all, I should have asked more questions and made sure that what I designed
+                    would be useful and work at the race. But I have gained insight from those experiences and know the
+                    weak points of my design to create something better for the future.</p>
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>Now that the race has been completed, and the cycle is over, most of the electrical team that joined
+                    before me is leaving, putting me and a few other people I trust to co-lead the electrical subteam
+                    for the start of the next car! I am really looking forward to a fresh start, every two years the
+                    team begins a new car from scratch! By helping assemble and validate boards, attending the testing
+                    sessions, and the race itself, I have collected a vast understanding of the car's system, both low
+                    voltage (computer, telemetry, sensors), and high voltage (battery packs, motor, solar panels/maximum
+                    power point trackers), and all the safety devices that work together. I also have a long list of
+                    improvements and modifications I would like to make based on seeing the current system to increase
+                    the reliability.</p>
+            </div>
+        </div>
+
+
+
+        <div class="section">
+
+            <div class="text">
+                <p>I am really looking forward to seeing what the future holds for me at Blue Sky!</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
