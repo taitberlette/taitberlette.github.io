@@ -10,15 +10,78 @@ body {
     overflow-x: hidden;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 #header {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    position: relative;
+    /* padding: 2rem; */
+}
+
+#header h1 {
+    font-size: clamp(3rem, 8vw, 10vh);
+    line-height: 1;
+}
+
+#header h3 {
+    margin-top: .5rem;
+    font-size: clamp(1.4rem, 4vw, 5vh);
+}
+
+/* =========================
+   HANGING IMAGES
+========================= */
+
+#hanging {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hanging-photo {
+    position: absolute;
+    width: clamp(180px, 25vw, 420px);
+    z-index: -1;
+}
+
+/* Desktop */
+
+#pipeOrganHanging {
+    top: 8vh;
+    left: 4vw;
+    animation-delay: 0s;
+}
+
+#rotaryDialHanging {
+    top: -12vh;
+    right: 5vw;
+    animation-delay: -.5s;
+}
+
+#musicBoxHanging {
+    top: 45vh;
+    right: 2vw;
+    animation-delay: -1s;
+}
+
+/* #header {
     height: 90vh;
     display: flex;
     justify-content: center;
     /* horizontal */
-    align-items: center;
-    /* vertical */
-    flex-direction: column;
-    /* stack vertically */
+align-items: center;
+/* vertical */
+flex-direction: column;
+/* stack vertically */
 }
 
 #header h1 {
@@ -131,7 +194,7 @@ body {
 }
 
 .button {
-    
+
     border: none;
     background-color: #914bd3;
     padding: 1rem;
@@ -173,5 +236,69 @@ body {
     100% {
         transform: scale(1);
         /* back to normal */
+    }
+}
+
+@media (max-width: 1000px) {
+    #projects {
+        column-count: 2;
+    }
+
+    .hanging-photo {
+        position: absolute;
+        width: 50vw;
+        z-index: -1;
+    }
+
+    #pipeOrganHanging {
+        top: 35vh;
+        left: 25vw;
+        animation-delay: 0s;
+    }
+
+    #rotaryDialHanging {
+        top: -20vh;
+        right: 15vw;
+        animation-delay: -0.5s;
+    }
+
+    #musicBoxHanging {
+        top: -15vh;
+        right: 30vw;
+        animation-delay: -1s;
+    }
+
+    #header {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        /* horizontal */
+        align-items: center;
+        /* vertical */
+        flex-direction: column;
+        /* stack vertically */
+    }
+
+
+    #header h1 {
+        font-size: 10vw;
+    }
+
+    #header h3 {
+        font-size: 5vw;
+    }
+
+    #scrollHint h4 {
+        font-size: 3vh;
+    }
+}
+
+@media (max-width: 700px) {
+    #projects {
+        column-count: 1;
+    }
+    
+    #scrollHint h4 {
+        font-size: 2vh;
     }
 }
