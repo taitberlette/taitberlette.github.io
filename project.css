@@ -98,6 +98,6 @@ body {
     background-color: white;
 }
 
-#content p {
+#content p, li {
     font-size: larger;
 }
